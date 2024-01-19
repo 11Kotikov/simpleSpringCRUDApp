@@ -44,13 +44,16 @@
 
 ## Конфигурация базы данных
 
-Приложение использует базу данных H2 в режиме встроенной базы данных. Настройки базы данных можно изменить в файле `application.properties`.
+Приложение использует базу данных H2 в режиме встроенной базы данных. Настройки базы данных можно изменить в файле `application.yml`.
 
 ```properties
 # Настройки базы данных H2
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=password
-spring.datasource.platform=h2
-spring.h2.console.enabled=true
+spring:
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
